@@ -1,0 +1,13 @@
+service: currencies
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+region: sa-east-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - schedule: rate(23 hours)
